@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hardly Notable | Independent Games</title>
+  <meta name="description" content="Hardly Notable is an independent mobile game and software studio.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0d0f14;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .logo {
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 900;
+      letter-spacing: -4px;
+      line-height: .9;
+    }
+
+    .tagline {
+      margin-top: 24px;
+      font-size: 1.3rem;
+      color: #aeb4c0;
+    }
+
+    .coming {
+      margin-top: 16px;
+      font-size: .9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #7d8491;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 70px 24px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .game {
+      background: #171a21;
+      border: 1px solid #282d38;
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .game h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .status {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8f96a3;
+      margin-bottom: 18px;
+    }
+
+    .game p, .about p {
+      color: #b7bdc8;
+    }
+
+    .about {
+      max-width: 700px;
+    }
+
+    .contact {
+      border-top: 1px solid #282d38;
+    }
+
+    a {
+      color: #f5f5f5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #727987;
+      font-size: .85rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="logo">HARDLY<br>NOTABLE</div>
+    <p class="tagline">Small games. Questionable amounts of effort.</p>
+    <p class="coming">Independent game studio · Oklahoma</p>
+  </div>
+</header>
+
+<section>
+  <h2>Games</h2>
+
+  <div class="games">
+
+    <div class="game">
+      <div class="emoji">🎯</div>
+      <h3>Close Enough</h3>
+      <div class="status">In Development</div>
+      <p>
+        A deceptively simple game of visual estimation.
+        No ruler. No calculator. Just you, your judgment,
+        and the uncomfortable discovery that 50% apparently
+        means different things to different people.
+      </p>
+    </div>
+
+    <div class="game">
+      <div class="emoji">🐷</div>
+      <h3>Critter Clutter</h3>
+      <div class="status">In Development</div>
+      <p>
+        The animals are mixed up. Your job is to fix it.
+        Untangle the chaos, group every critter with its own
+        kind, and try not to make the farm situation worse.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="about">
+    <h2>About</h2>
+    <p>
+      Hardly Notable is an independent mobile game and software
+      studio focused on making simple ideas surprisingly difficult
+      to put down.
+    </p>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>
+    General:
+    <a href="mailto:hello@hardlynotable.com">
+      hello@hardlynotable.com
+    </a>
+  </p>
+
+  <p>
+    Support:
+    <a href="mailto:support@hardlynotable.com">
+      support@hardlynotable.com
+    </a>
+  </p>
+</section>
+
+<footer>
+  © 2026 Hardly Notable LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
