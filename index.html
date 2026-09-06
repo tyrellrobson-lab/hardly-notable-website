@@ -16,15 +16,13 @@
     main{overflow:hidden}section{max-width:1050px;margin:auto;padding:76px 24px}h2{font-size:clamp(2rem,5vw,3rem);line-height:1.1;letter-spacing:-.04em;margin-bottom:34px}
     .games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.game{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:32px;transition:.2s ease}
     .game:hover{transform:translateY(-3px);border-color:#3b4250;background:#1b1f28}.emoji{font-size:3rem;margin-bottom:20px}.game h3{font-size:1.6rem;margin-bottom:10px}.status{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.6px;color:var(--accent);background:rgba(216,255,102,.08);border:1px solid rgba(216,255,102,.25);border-radius:999px;padding:5px 9px;margin-bottom:18px}
-    .lab{margin-top:54px;padding-top:46px;border-top:1px solid var(--border)}.lab-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.lab-heading h3{font-size:clamp(1.5rem,4vw,2rem);letter-spacing:-.03em}.lab-heading p{max-width:520px;color:var(--quiet);text-align:right}.app-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.app{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:15px;padding:22px}.app h4{font-size:1.08rem;margin-bottom:6px}.app p{font-size:.94rem;color:var(--muted)}.app .mini-status{display:block;margin-top:14px;color:var(--quiet);font-size:.67rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
     .game p,.about p,.services p{color:var(--muted)}.services-wrap{background:linear-gradient(135deg,#171a21,#11151b);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     .services{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:64px;align-items:center}.services h2{max-width:650px;margin:18px 0 20px}.services-copy p:not(.eyebrow){max-width:660px;font-size:1.08rem}
     .button{display:inline-flex;margin-top:28px;padding:13px 19px;border-radius:999px;background:var(--accent);color:#10120d;font-weight:800;text-decoration:none;transition:.2s ease}.button:hover{transform:translateY(-2px);filter:brightness(1.07)}
     .service-list{list-style:none;display:grid;gap:12px}.service-list li{padding:15px 18px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;color:#d9dde5}.service-list li::before{content:"↗";color:var(--accent);margin-right:10px;font-weight:800}
     .about{max-width:720px}.about p{font-size:1.05rem}.contact{border-top:1px solid var(--border)}.contact-grid{display:flex;gap:48px;flex-wrap:wrap}.contact p{color:var(--quiet)}.contact a{display:block;color:var(--text);text-decoration:none;font-weight:650}.contact a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
     footer{text-align:center;padding:40px 20px;color:#727987;font-size:.85rem}
-    @media(max-width:800px){.app-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:720px){header{min-height:68vh}section{padding:58px 20px}.games,.services,.app-grid{grid-template-columns:1fr}.services{gap:36px}.game{padding:26px}.lab-heading{align-items:start;flex-direction:column}.lab-heading p{text-align:left}.contact-grid{gap:22px;flex-direction:column}}
+    @media(max-width:720px){header{min-height:68vh}section{padding:58px 20px}.games,.services{grid-template-columns:1fr}.services{gap:36px}.game{padding:26px}.contact-grid{gap:22px;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.game,.button{transition:none}}
   </style>
 </head>
@@ -36,18 +34,13 @@
       <div class="games">
         <article class="game"><div class="emoji" aria-hidden="true">🧠</div><h3>Recall</h3><div class="status">Coming Soon · In Development</div><p>A memory game about paying attention for once. Match what you saw, trust your brain, and discover how confidently it can be wrong.</p></article>
         <article class="game"><div class="emoji" aria-hidden="true">🐷</div><h3>Critter Clutter</h3><div class="status">Coming Soon · In Development</div><p>The animals are mixed up. Your job is to fix it. Untangle the chaos, group every critter with its own kind, and try not to make the farm situation worse.</p></article>
-      </div>
-      <div class="lab" aria-labelledby="lab-title">
-        <div class="lab-heading"><h3 id="lab-title">Also in the lab</h3><p>Working titles, early builds, and several ideas that refused to stay in the notes app.</p></div>
-        <div class="app-grid">
-          <article class="app"><h4>Perfect Timing</h4><p>Precision challenges for people who enjoy being almost exactly right—and then being sabotaged.</p><span class="mini-status">In development</span></article>
-          <article class="app"><h4>Last Time</h4><p>A simple way to remember when you last did the things that are easy to forget until they become a problem.</p><span class="mini-status">In development · Working title</span></article>
-          <article class="app"><h4>Brain Chaos</h4><p>A fidget toy for your brain: tiny challenges, odd discoveries, and no guarantee the duck will stay put.</p><span class="mini-status">In development · Working title</span></article>
-          <article class="app"><h4>Match / Decision</h4><p>A private consensus engine for deciding what to eat, watch, do, or stop arguing about.</p><span class="mini-status">In development · Working title</span></article>
-          <article class="app"><h4>Micro-Party</h4><p>A pocket-sized party host built to get a room playing before anyone can suggest making a group chat.</p><span class="mini-status">In development · Working title</span></article>
-          <article class="app"><h4>Subscription Tracker</h4><p>See what keeps charging you, what it costs per year, and which subscription has quietly become a lifestyle.</p><span class="mini-status">In development · Working title</span></article>
-          <article class="app"><h4>Photo Paint-by-Number</h4><p>Turn your own photos into paint-by-number projects, including a mystery mode for people who enjoy preventable suspense.</p><span class="mini-status">In development · Working title</span></article>
-        </div>
+        <article class="game"><div class="emoji" aria-hidden="true">⏱️</div><h3>Perfect Timing</h3><div class="status">Coming Soon · In Development</div><p>Precision challenges for people who enjoy being almost exactly right—and then being sabotaged.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">📅</div><h3>Last Time</h3><div class="status">In Development · Working Title</div><p>A simple way to remember when you last did the things that are easy to forget until they become a problem.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">🌀</div><h3>Brain Chaos</h3><div class="status">In Development · Working Title</div><p>A fidget toy for your brain: tiny challenges, odd discoveries, and no guarantee the duck will stay put.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">🤝</div><h3>Match / Decision</h3><div class="status">In Development · Working Title</div><p>A private consensus engine for deciding what to eat, watch, do, or stop arguing about.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">🎉</div><h3>Micro-Party</h3><div class="status">In Development · Working Title</div><p>A pocket-sized party host built to get a room playing before anyone can suggest making a group chat.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">💸</div><h3>Subscription Tracker</h3><div class="status">In Development · Working Title</div><p>See what keeps charging you, what it costs per year, and which subscription has quietly become a lifestyle.</p></article>
+        <article class="game"><div class="emoji" aria-hidden="true">🎨</div><h3>Photo Paint-by-Number</h3><div class="status">In Development · Working Title</div><p>Turn your own photos into paint-by-number projects, including a mystery mode for people who enjoy preventable suspense.</p></article>
       </div>
     </section>
     <div class="services-wrap">
