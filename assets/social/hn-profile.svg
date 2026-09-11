@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Hardly Notable</title>
+  <desc id="desc">Cream HN monogram with a blue cursor on forest green.</desc>
+  <rect width="512" height="512" rx="112" fill="#1B3D2E"/>
+  <path fill="#F6F4ED" d="M68 121h66v101h83V121h66v270h-66V286h-83v105H68z"/>
+  <path fill="#F6F4ED" d="M250 121h59l77 142V121h65v270h-59l-77-143v143h-65z"/>
+  <path fill="#8FB8D9" stroke="#1B3D2E" stroke-width="13" stroke-linejoin="round" d="M239 228l96 48-43 17-18 44z"/>
+</svg>
