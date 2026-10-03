@@ -41,9 +41,10 @@ function renderTest(test) {
 function renderReport(report) {
   const known = report.confidence.known_from_user.length;
   document.querySelector('#report-meta').textContent = `${known} direct input${known === 1 ? '' : 's'} · assumptions kept visible · no success prediction`;
+  const aiRisks = report.ai.risks.length ? `<div class="inline-note"><strong>Risks to design around</strong>${list(report.ai.risks)}</div>` : '';
   const aiHelps = report.ai.useful_for.length
-    ? section('04 · Where AI helps','Use it where it earns its place',`<p>${escapeHTML(report.ai.recommendation)}</p>${list(report.ai.useful_for)}${report.ai.risks.length ? `<div class="inline-note"><strong>Risks to design around</strong>${list(report.ai.risks)}</div>` : ''}`)
-    : section('04 · Where AI helps','Probably nowhere—yet',`<p>${escapeHTML(report.ai.recommendation)}</p><p class="plain-truth">That is a useful answer, not a missing feature.</p>`,'accent-card');
+    ? section('04 · Where AI helps','Use it where it earns its place',`<p>${escapeHTML(report.ai.recommendation)}</p>${list(report.ai.useful_for)}${aiRisks}`)
+    : section('04 · Where AI helps','Probably nowhere—yet',`<p>${escapeHTML(report.ai.recommendation)}</p><p class="plain-truth">That is a useful answer, not a missing feature.</p>${aiRisks}`,'accent-card');
   output.innerHTML = `
     <section class="report-focus"><p class="report-label">Your idea, in focus</p><span>${escapeHTML(report.idea.working_name)}</span><h3>${escapeHTML(report.idea.one_line_concept)}</h3></section>
     <div class="report-grid">
@@ -53,7 +54,7 @@ function renderReport(report) {
       ${aiHelps}
       ${section('05 · AI restraint','Where AI doesn’t help',`${list(report.ai.avoid_for)}`)}
       ${section('06 · Complexity','Complexity to respect',`${list(report.complexity.concerns)}`)}
-      ${section('07 · Reality','What has to be true',`<h4>Critical assumptions</h4>${list(report.reality.assumptions)}<div class="danger-box"><span>Biggest unknown</span><strong>${escapeHTML(report.reality.biggest_unknown)}</strong></div>`,'wide-card')}
+      ${section('07 · Reality','What has to be true',`<h4>Critical assumptions</h4>${list(report.reality.assumptions)}<div class="danger-box"><span>Biggest unknown</span><strong>${escapeHTML(report.reality.biggest_unknown)}</strong></div>${report.reality.validation_needed.length ? `<h4>What to validate next</h4>${list(report.reality.validation_needed)}` : ''}`,'wide-card')}
     </div>
     <section class="hn-test"><div class="test-heading"><div><p class="report-label">The HN Test</p><h3>Does the idea deserve to become more complicated?</h3></div><p>The HN Test isn’t a prediction that a product will succeed. It’s a way of asking whether the idea deserves to become more complicated.</p></div><div class="test-list">${renderTest(report.hn_test)}</div></section>
     <section class="next-move"><div><p class="report-label">HN’s next move</p><h3>${escapeHTML(report.next_move.recommendation)}</h3><p>${escapeHTML(report.next_move.reasoning)}</p></div><ol>${report.next_move.actions.map((action,index) => `<li><span>0${index+1}</span>${escapeHTML(action)}</li>`).join('')}</ol></section>

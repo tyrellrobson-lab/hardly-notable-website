@@ -25,7 +25,7 @@
       <div class="lens-grid" aria-hidden="true"></div>
       <div class="shell lens-hero-inner">
         <div class="lens-intro">
-          <p class="kicker"><span></span> HN Product Lens · Local prototype</p>
+          <p class="kicker"><span></span> HN Product Lens · AI analysis</p>
           <h1 id="lens-title">Give us the mess.<br><em>We’ll find the useful part.</em></h1>
           <p>Turn an unstructured idea, everyday problem, or tangled product concept into a focused direction—without inflating it into a twelve-platform startup.</p>
         </div>
@@ -43,10 +43,10 @@
             <p class="eyebrow">01 · Brain dump</p>
             <h2 id="dump-title">Got an idea?<br>Brain dump it.</h2>
             <p>Describe something you want to build, an everyday problem, a business frustration, or the idea that will not leave you alone. It does not need to be organized.</p>
-            <div class="privacy-card" id="local-privacy"><strong>Your idea stays in this browser.</strong><p>This is a local, rule-based prototype, not an AI service. Your idea and answers are processed in this page without being sent to HN or OpenAI. The optional handoff temporarily saves your idea and summary in this tab. <a href="/product-lens/privacy/">Privacy details</a>.</p></div>
+            <div class="privacy-card" id="local-privacy" hidden><strong>Your idea stays in this browser.</strong><p>This is a local, rule-based prototype, not an AI service. Your idea and answers are processed in this page without being sent to HN or OpenAI. The optional handoff temporarily saves your idea and summary in this tab. <a href="/product-lens/privacy/">Privacy details</a>.</p></div>
           </div>
           <form class="dump-card" id="dump-form">
-            <div class="privacy-card" id="live-privacy" hidden><strong>AI analysis uses HN’s server and OpenAI.</strong><p>Your idea and follow-up answers are sent to OpenAI through HN’s Cloudflare server. HN’s application does not save their contents or your analysis. Providers process technical usage data; OpenAI may retain abuse-monitoring data for up to 30 days (or longer where legally required), and temporary processing/cache state may remain. This is not Zero Data Retention. <a href="/product-lens/privacy/">Privacy details</a>.</p><label><input id="ai-consent" type="checkbox"> I agree to send my idea and follow-up answers to HN and OpenAI for analysis.</label><p>Cancel stops waiting, but cannot retract information already sent or guarantee the provider stops processing it.</p></div>
+            <div class="privacy-card" id="live-privacy"><strong>AI analysis uses HN’s server and OpenAI.</strong><p>Your idea and follow-up answers are sent to OpenAI through HN’s Cloudflare server. HN’s application does not save their contents or your analysis. Providers process technical usage data; OpenAI may retain abuse-monitoring data for up to 30 days (or longer where legally required), and temporary processing/cache state may remain. This is not Zero Data Retention. <a href="/product-lens/privacy/">Privacy details</a>.</p><label><input id="ai-consent" type="checkbox" required> I agree to send my idea and follow-up answers to HN and OpenAI for analysis.</label><p>Cancel stops waiting, but cannot retract information already sent or guarantee the provider stops processing it.</p></div>
             <label for="brain-dump">What is rattling around in your head?</label>
             <textarea id="brain-dump" name="brainDump" minlength="12" maxlength="5000" required placeholder="Type it exactly as it exists in your head. Half sentences welcome."></textarea>
             <div class="starters" aria-label="Example ways to start">
