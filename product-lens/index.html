@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Lens — Turn a Messy Idea Into a Useful Product Direction</title>
+  <meta name="description" content="Give Hardly Notable Product Lens an idea, everyday problem, or business frustration. Get a focused product direction and a practical next move.">
+  <meta name="theme-color" content="#102d22">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="canonical" href="https://hardlynotable.com/product-lens/">
+  <link rel="icon" type="image/svg+xml" href="/assets/social/hn-profile.svg">
+  <link rel="stylesheet" href="/assets/product-lens.css">
+</head>
+<body>
+  <a class="skip-link" href="#lens-main">Skip to Product Lens</a>
+  <nav class="lens-nav" aria-label="Primary navigation">
+    <div class="shell nav-inner">
+      <a class="brand" href="/" aria-label="Hardly Notable home"><img src="/assets/social/hn-profile.svg" width="42" height="42" alt=""><span>Hardly Notable</span></a>
+      <div class="nav-links"><a href="/">Studio</a><a href="/#work">Our products</a><a class="nav-cta" href="/start-a-project/">Start a project <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </nav>
+
+  <main id="lens-main">
+    <section class="lens-hero" aria-labelledby="lens-title">
+      <div class="lens-grid" aria-hidden="true"></div>
+      <div class="shell lens-hero-inner">
+        <div class="lens-intro">
+          <p class="kicker"><span></span> HN Product Lens · Local prototype</p>
+          <h1 id="lens-title">Give us the mess.<br><em>We’ll find the useful part.</em></h1>
+          <p>Turn an unstructured idea, everyday problem, or tangled product concept into a focused direction—without inflating it into a twelve-platform startup.</p>
+        </div>
+        <div class="model-map" aria-label="The HN Product Model">
+          <span>Human</span><i>→</i><span>Useful</span><i>→</i><span>Technology</span><i>→</i><span>AI</span><i>→</i><span>Complexity</span><i>→</i><span>Reality</span><i>→</i><span>Next move</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="lens-workspace" aria-live="polite">
+      <div class="shell">
+        <p id="lens-status" role="status" tabindex="-1"></p>
+        <section class="lens-stage is-active" data-stage="entry" aria-labelledby="dump-title">
+          <div class="stage-copy">
+            <p class="eyebrow">01 · Brain dump</p>
+            <h2 id="dump-title">Got an idea?<br>Brain dump it.</h2>
+            <p>Describe something you want to build, an everyday problem, a business frustration, or the idea that will not leave you alone. It does not need to be organized.</p>
+            <div class="privacy-card" id="local-privacy"><strong>Your idea stays in this browser.</strong><p>This is a local, rule-based prototype, not an AI service. Your idea and answers are processed in this page without being sent to HN or OpenAI. The optional handoff temporarily saves your idea and summary in this tab. <a href="/product-lens/privacy/">Privacy details</a>.</p></div>
+          </div>
+          <form class="dump-card" id="dump-form">
+            <div class="privacy-card" id="live-privacy" hidden><strong>AI analysis uses HN’s server and OpenAI.</strong><p>Your idea and follow-up answers are sent to OpenAI through HN’s Cloudflare server. HN’s application does not save their contents or your analysis. Providers process technical usage data; OpenAI may retain abuse-monitoring data for up to 30 days (or longer where legally required), and temporary processing/cache state may remain. This is not Zero Data Retention. <a href="/product-lens/privacy/">Privacy details</a>.</p><label><input id="ai-consent" type="checkbox"> I agree to send my idea and follow-up answers to HN and OpenAI for analysis.</label><p>Cancel stops waiting, but cannot retract information already sent or guarantee the provider stops processing it.</p></div>
+            <label for="brain-dump">What is rattling around in your head?</label>
+            <textarea id="brain-dump" name="brainDump" minlength="12" maxlength="5000" required placeholder="Type it exactly as it exists in your head. Half sentences welcome."></textarea>
+            <div class="starters" aria-label="Example ways to start">
+              <button type="button" data-starter="I wish there were an easier way to ">I wish there were an easier way to…</button>
+              <button type="button" data-starter="I have an idea for an app that ">I have an idea for an app that…</button>
+              <button type="button" data-starter="My business keeps struggling with ">My business keeps struggling with…</button>
+              <button type="button" data-starter="This might be stupid, but ">This might be stupid, but…</button>
+            </div>
+            <div class="dump-footer"><span><b id="character-count">0</b> / 5,000</span><button class="primary-button" type="submit">Find the useful part <span aria-hidden="true">→</span></button></div>
+          </form>
+        </section>
+
+        <section class="lens-stage" data-stage="clarify" aria-labelledby="clarify-title" hidden>
+          <div class="stage-copy"><p class="eyebrow">02 · A useful question or two</p><h2 id="clarify-title">A little less fog.</h2><p>These answers would materially change the recommendation. If they would not, Product Lens would not ask.</p></div>
+          <form class="clarify-card" id="clarify-form"><div id="clarify-fields"></div><div class="clarify-actions"><button class="text-button" id="clarify-back" type="button">← Edit brain dump</button><button class="primary-button" type="submit">Focus the idea <span aria-hidden="true">→</span></button></div></form>
+        </section>
+
+        <section class="lens-stage analysis-stage" data-stage="analysis" aria-labelledby="analysis-title" hidden>
+          <div class="analysis-mark"><img src="/assets/social/hn-profile.svg" width="76" height="76" alt=""><span></span><span></span></div>
+          <p class="eyebrow">HN Product Model</p><h2 id="analysis-title">Finding the useful part…</h2>
+          <button type="button" class="text-button" id="cancel-analysis">Cancel and edit</button>
+          <div class="analysis-rail" aria-hidden="true"><span>Problem</span><span>Person</span><span>Useful</span><span>Unnecessary</span><span>Technology</span><span>Risk</span><span>First version</span></div>
+        </section>
+
+        <section class="lens-stage report-stage" data-stage="report" aria-labelledby="report-title" hidden>
+          <header class="report-header"><div><p class="eyebrow">HN Product Lens report</p><h2 id="report-title">Your idea, in focus.</h2><p class="report-meta" id="report-meta"></p></div><div class="report-tools"><button type="button" id="print-report">Print / save PDF</button><button type="button" id="restart-lens">New idea</button></div></header>
+          <div id="report-output"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lens-footer"><div class="shell"><a class="footer-brand" href="/"><img src="/assets/social/hn-profile.svg" width="42" height="42" alt=""><span>Hardly Notable LLC<small>Small Ideas. Built Properly.</small></span></a><div><a href="mailto:hello@hardlynotable.com">hello@hardlynotable.com</a><span>© 2026 Hardly Notable LLC.</span></div></div></footer>
+  <script type="module" src="/assets/product-lens.js"></script>
+</body>
+</html>
