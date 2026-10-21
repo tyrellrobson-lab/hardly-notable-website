@@ -7,7 +7,7 @@ form?.addEventListener('submit', event => {
   const data = new FormData(form);
   const value = key => String(data.get(key) || '').trim() || 'Not provided';
   const subject = '$750 website package inquiry';
-  const body = `Hi Ty,\n\nI'm interested in the $750 one-page website package.\n\nName: ${value('name')}\nEmail: ${value('email')}\nBusiness / existing website: ${value('business')}\n\nWhat I would like the page to do:\n${value('goal')}\n\nPlease let me know whether the scope and timing fit.\n\nPrepared at hardlynotable.com/websites/`;
+  const body = `Hello Hardly Notable,\n\nI'm interested in the $750 one-page website package.\n\nName: ${value('name')}\nEmail: ${value('email')}\nBusiness / existing website: ${value('business')}\n\nWhat I would like the page to do:\n${value('goal')}\n\nPlease let me know whether the scope and timing fit.\n\nPrepared at hardlynotable.com/websites/`;
   document.querySelector('#email-text').value = `To: hello@hardlynotable.com\nSubject: ${subject}\n\n${body}`;
   document.querySelector('#email-link').href = `mailto:hello@hardlynotable.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   preview.hidden = false;
