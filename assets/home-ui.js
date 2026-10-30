@@ -6,8 +6,8 @@ menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () =>
 
 const galleries = {
   recall: {title:'Recall', slides:[['recall.png','Original Recall artwork: a blue butterfly in a cabinet of curiosities','Original game artwork · Coming soon']]},
-  critter: {title:'Critter Clutter', slides:[['critter-native-home.png','Critter Clutter iPhone home screen','Home screen · Submitted for App Store review'],['critter-native-game.png','Critter Clutter Orchard Relay farm puzzle','Orchard Relay gameplay · Submitted for App Store review']]},
-  night: {title:'Night Shift', slides:[['night-native-home.png','Night Shift iPhone home screen','Home screen · Submitted for App Store review'],['night-native-game.png','Night Shift Deep Storage freight puzzle','Deep Storage gameplay · Submitted for App Store review']]}
+  critter: {title:'Critter Clutter', slides:[['critter-native-home.png','Critter Clutter iPhone home screen','Home screen · iPhone screenshot'],['critter-native-game.png','Critter Clutter Orchard Relay farm puzzle','Orchard Relay gameplay · iPhone screenshot']]},
+  night: {title:'Night Shift Sort', slides:[['night-native-home.png','Night Shift Sort iPhone home screen','Home screen · iPhone screenshot'],['night-native-game.png','Night Shift Sort Deep Storage freight puzzle','Deep Storage gameplay · iPhone screenshot']]}
 };
 const dialog = document.querySelector('.image-dialog');
 const image = document.querySelector('#gallery-image');
