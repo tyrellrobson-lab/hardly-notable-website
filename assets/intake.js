@@ -1,4 +1,5 @@
 const form = document.querySelector('#project-form');
+const es = document.documentElement.lang === 'es';
 
 if (form) {
   try {
@@ -21,9 +22,20 @@ if (form) {
     if (!form.reportValidity()) return;
 
     const data = new FormData(form);
-    const value = (name) => String(data.get(name) || '').trim() || 'Not provided';
-    const subject = `Project inquiry — ${value('projectType')}`;
-    const body = [
+    const value = (name) => String(data.get(name) || '').trim() || (es ? 'No indicado' : 'Not provided');
+    const subject = es ? `Consulta de proyecto — ${value('projectType')}` : `Project inquiry — ${value('projectType')}`;
+    const body = es ? [
+      'NUEVA CONSULTA DE PROYECTO (en español)', '',
+      `Nombre: ${value('name')}`,
+      `Correo: ${value('email')}`,
+      `Empresa / organización: ${value('company')}`,
+      `Tipo de proyecto: ${value('projectType')}`,
+      `Plazo ideal: ${value('timeline')}`,
+      `Presupuesto: ${value('budget')}`, '',
+      'QUÉ QUIERE CREAR', value('idea'), '',
+      'PARA QUIÉN ES', value('audience'), '',
+      'Preparado en hardlynotable.com/es/start-a-project/'
+    ].join('\n') : [
       'NEW PROJECT INQUIRY', '',
       `Name: ${value('name')}`,
       `Email: ${value('email')}`,
@@ -37,11 +49,11 @@ if (form) {
     ].join('\n');
 
     const brief = document.querySelector('#prepared-brief');
-    brief.value = `To: hello@hardlynotable.com\nSubject: ${subject}\n\n${body}`;
+    brief.value = `${es ? 'Para' : 'To'}: hello@hardlynotable.com\n${es ? 'Asunto' : 'Subject'}: ${subject}\n\n${body}`;
     document.querySelector('#brief-preview').hidden = false;
     document.querySelector('#open-email').href = `mailto:hello@hardlynotable.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     const status = document.querySelector('#form-status');
-    if (status) status.textContent = 'Nothing has been sent. Review your brief below, then open your email app or select and copy the text.';
+    if (status) status.textContent = es ? 'No se ha enviado nada. Revise su resumen abajo y luego abra su app de correo o seleccione y copie el texto.' : 'Nothing has been sent. Review your brief below, then open your email app or select and copy the text.';
     brief.focus();
   });
 }
